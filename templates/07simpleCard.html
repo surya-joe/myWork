@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Simple card hover </title>
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:sans-serif;
+        }
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background: #333;
+        }
+        .container{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center; 
+            align-items:center;
+        }
+        .container .card{
+            position:relative;
+            width:320px;
+            height:620px;
+            background: #fff;
+            padding:30px;
+            margin:20px;
+            border-radius:20px;
+            text-align:center;
+        }
+        .container .card .imgBox{
+            position:relative;
+            width:100%;
+            height:50%;
+        }
+        .container .card .imgBox img{
+            position:relative;
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            border-radius:50px;
+            box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+        }
+        .container .card .profileName h2{
+            padding: 20px 0 10px 0;
+        }
+        .container .card .content a{
+            position:relative;
+            display:inline-block;
+            padding:10px 20px;
+            background:#111;
+            color:#fff;
+            border-radius:40px;
+            text-decoration:none;
+            margin-top:15px;
+            text-align:right;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="imgBox">
+                <img src="../assets/images/jack.jpg" alt="">
+            </div>
+            <div class="profileName">
+                <h2>Asta lacksor</h2>
+            </div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quos voluptatem sit quas sequi tempora laudantium, accusantium praesentium nihil neque asperiores commodi dolorem maiores quae! A, tempore omnis? Molestiae, accusamus?</p>
+                <a href="#" > Read-More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBox">
+                <img src="../assets/images/novell.jpg" alt="">
+            </div>
+            <div class="profileName">
+                <h2>Novell Clark</h2>
+            </div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quos voluptatem sit quas sequi tempora laudantium, accusantium praesentium nihil neque asperiores commodi dolorem maiores quae! A, tempore omnis? Molestiae, accusamus?</p>
+                <a href="#" > Read-More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="imgBox">
+                <img src="../assets/images/lillyThomas.jpg" alt="">
+            </div>
+            <div class="profileName">
+                <h2>Lilly Thomas</h2>
+            </div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quos voluptatem sit quas sequi tempora laudantium, accusantium praesentium nihil neque asperiores commodi dolorem maiores quae! A, tempore omnis? Molestiae, accusamus?</p>
+                <a href="#" > Read-More</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
