@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image gallery</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            background:#333;
+        }
+        .container{
+            min-height:100vh;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:space-evenly;
+            align-items:center;
+            padding:20px;
+        }
+        .card{
+            background:#fff;
+            width:200px;
+            height:230px;
+            margin:25px;
+            border-radius:30px;
+            overflow: hidden;
+            box-shadow: 0 15px 10px rgba(0,0,0,0.4);
+            transition:0.2s; 
+        }
+        .container .card:hover{
+            transform:scale(1.2)
+        }
+        .container .card img{
+            position:relative;
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="../assets/images/alexa.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="../assets/images/airen.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="../assets/images/marco.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="../assets/images/lillyThomas.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="../assets/images/lara.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="../assets/images/nirobi.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="../assets/images/mega.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="../assets/images/june.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="../assets/images/jack.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="../assets/images/veronica.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="../assets/images/devon.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="../assets/images/henna.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
