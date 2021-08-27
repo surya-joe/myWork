@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple card</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:sans-serif;
+        }
+        body{
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            /* position:relative; */
+            width:100%;
+            height:100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .container .card{
+            position:relative;
+            width:320px;
+            height:auto;
+            /* background:red; */
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 20px 20px rgba(0,0,0,0.3);
+            margin:30px;
+        }
+       
+        .container .card .imgBox img{
+            position:relative;
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        .container .card .contentBox{
+            position:relative;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="imgBox">
+                <img src="../assets/images/grato.jpg" alt="">
+            </div>
+            <div class="contentBox">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi molestiae cumque, consectetur est dolor praesentium enim fugiat voluptatum in quo dolorum facere aspernatur nam corporis facilis saepe, cum illo ea.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBox">
+                <img src="../assets/images/luna.jpg" alt="">
+            </div>
+            <div class="contentBox">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi molestiae cumque, consectetur est dolor praesentium enim fugiat voluptatum in quo dolorum facere aspernatur nam corporis facilis saepe, cum illo ea.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBox">
+                <img src="../assets/images/rose.jpg" alt="">
+            </div>
+            <div class="contentBox">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi molestiae cumque, consectetur est dolor praesentium enim fugiat voluptatum in quo dolorum facere aspernatur nam corporis facilis saepe, cum illo ea.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
