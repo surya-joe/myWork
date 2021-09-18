@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* default  */
+        body{
+            background-color: #1ad;
+        }
+       
+        /* screen width <= 800px */
+        @media(max-width:800px){
+            body{
+                background-color: #000;
+                color:#fff
+            }
+        }
+        /* screen height <= 500px */
+        @media(max-height:500px) {
+            body{
+                background-color: #fff;
+                color:#000
+            }
+        }
+
+        /* logic */
+        /* if ( screen width > 800px and height > 500px ){
+            default css properties
+            background-color:#1ad(blue)
+        }  */
+
+        /* if (screen width <= 800px and height > 500px){
+            background-color:#000(black)
+        } */
+
+        /* if (screen width < 800px and height <= 500px){
+            background-color:#fff(white)
+        } */
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Media Query</h1>
+    </div>
+</body>
+</html>

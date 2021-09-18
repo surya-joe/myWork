@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo card</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:sans-serif;
+        }
+        body{
+            min-height:100vh;
+            display:grid;
+            justify-content:center;
+            align-items: center;
+        }
+        .container{
+            position:relative;
+            width: 100%;
+            height: auto;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            align-items:center;
+            padding:20px 10px;
+        }
+        
+        .container .card{
+            position:relative;
+            width:50%;
+            height:auto;
+            display:flex;
+            justify-content:stretch;
+            align-items: center;
+            border-radius: 10px;
+            margin:20px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.3)
+        }
+        
+        .container .card .rollNumber{
+            position:relative;
+            font-size:2.5em;
+            font-weight:700;
+            padding:20px;
+            color:#fff;
+            border-radius:10px 0 0 10px;
+        }
+        .container .card .r1{
+            background:rgb(253, 6, 6);
+        }
+        .container .card .r2{
+            background:rgb(70, 199, 19);
+        }
+        .container .card .r3{
+            background:rgb(77, 167, 241);
+        }
+        .container .card .r4{
+            background:rgb(226, 47, 250);
+        }
+        .container .card .r5{
+            background:rgb(245, 230, 26);
+        }
+        .container .card .r6{
+            background:rgb(145, 143, 143);
+        }
+        .container .card .r7{
+            background:rgb(0, 0, 0);
+        }
+        .container .card .contentBox{
+            position:relative;
+            padding:0 20px;
+        }
+        .container .card  a{
+            position:absolute;
+            right:0;
+            padding:0 20px;
+            font-size: 1.5em;
+            text-decoration:none;
+        }
+
+        @media(max-width:900px){
+            .container .card{
+                width:100%;
+            }
+            .container .card .rollNumber{
+                font-size:2em;
+            }
+            .container .card .contentBox{
+                font-size:0.9em;
+                padding:0 40px 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="rollNumber r1"> 01 </div>
+            <div class="contentBox">
+                <h2>Monday</h2>
+                <p>Go to gym.</p>
+            </div>
+            <a href="">...</a>
+        </div>
+
+        <div class="card">
+            <div class="rollNumber r2"> 02 </div>
+            <div class="contentBox">
+                <h2>Tuesday</h2>
+                <p>Complete JavaScript.</p>
+            </div>
+            <a href="">...</a>
+        </div>
+
+        <div class="card">
+            <div class="rollNumber r3"> 03 </div>
+            <div class="contentBox">
+                <h2>Wednesday</h2>
+                <p>Use your time wisely.</p>
+            </div>
+            <a href="">...</a>
+        </div>
+
+        <div class="card">
+            <div class="rollNumber r4"> 04 </div>
+            <div class="contentBox">
+                <h2>Thursday</h2>
+                <p>learn new things.</p>
+            </div>
+            <a href="">...</a>
+        </div>
+
+        <div class="card">
+            <div class="rollNumber r5"> 05 </div>
+            <div class="contentBox">
+                <h2>Friday</h2>
+                <p>Build a strong mind-set.</p>
+            </div>
+            <a href="">...</a>
+        </div>
+
+        <div class="card">
+            <div class="rollNumber r6"> 06 </div>
+            <div class="contentBox">
+                <h2>Saturday</h2>
+                <p>Recall all weekly activity.</p>
+            </div>
+            <a href="">...</a>
+        </div>
+
+        <div class="card">
+            <div class="rollNumber r7"> 07 </div>
+            <div class="contentBox">
+                <h2>Sunday</h2>
+                <p>Take a good rest.</p>
+            </div>
+            <a href="">...</a>
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo card</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: sans-serif;
+        }
+        body{
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            position:relative;
+            width:100%;
+            height:100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding:0 40px;
+
+        }
+        .container .card{
+            position:relative;
+            width:600px;
+            height:auto;
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+            /* border:2px solid; */
+            border-radius:15px;
+            margin:30px;
+            overflow: hidden;
+            box-shadow:0 15px 20px rgba(0,0,0,0.3)
+        }
+        .container .card .rollNumber{
+            position: relative;
+            width:auto;
+            height:100%;
+            font-size: 3em;
+            padding: 40px;
+            background: #aaa;
+            overflow: hidden;
+            border-style:none;
+        }
+        .container .card .contentBox{
+            position:relative;
+            padding: 30px;
+            overflow: scroll;
+            overflow: hidden;
+        }
+        .container .card .menuIcon{
+            position:relative;
+            padding:0 40px;
+            font-size: 1.5em;
+        }
+        @media(max-width:500px){
+            .container{
+                padding:0;
+            }
+            .container .card{
+                position:relative;
+                width:100%;
+                height:auto;
+            }
+            .container .card .rollNumber{
+                font-size: 2em;
+                padding:25px;
+                overflow: hidden;
+            }
+            .container .card .contentBox{
+                padding:0 0 0 15px ;
+                /* overflow: scroll; */
+                background-color: #888;
+
+            }
+            .container .card .contentBox h2{
+                font-size: medium;
+
+            }
+            .container .card .contentBox p{
+                font-size:small;
+            }
+            .container .card .menuIcon{
+                padding-right:10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="rollNumber">
+                <p>01</p>
+            </div>
+            <div class="contentBox">
+                <h2>Monday</h2>
+                <p>Complete JavaScript</p>
+            </div>
+            <div class="menuIcon">
+                <p>...</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="rollNumber">
+                <p>02</p>
+            </div>
+            <div class="contentBox">
+                <h2>Tuesday</h2>
+                <p>Design new templates</p>
+            </div>
+            <div class="menuIcon">
+                <p>...</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="rollNumber">
+                <p>03</p>
+            </div>
+            <div class="contentBox">
+                <h2>wednesday</h2>
+                <p>Update git repos</p>
+            </div>
+            <div class="menuIcon">
+                <p>...</p>
+            </div>
+        </div>
+
+       
+    </div>
+</body>
+</html> -->
