@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Loading bar animation </title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #000;
+        }
+        .container{
+            position:relative;
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container span{
+            position:relative;
+            width:20px;
+            height:100px;
+            /* background: red; */
+            /* background: linear-gradient(to right, #b2fefa, #0ed2f7);  */
+            /* background: linear-gradient(45deg, #11998e, #38ef7d); */
+            background: linear-gradient(to right, #00f260, #0575e6);
+            margin:8px;
+            /* border-radius: 20px; */
+            animation: bounce 1s ease infinite;
+            /* background-color: #000; */
+        }
+        @keyframes bounce {
+            50%{
+                transform:scale(0.6);
+                /* border-radius: 50px; */
+                /* transform:rotateX(90deg); */
+                /* background: linear-gradient(to right, #b2fefa, #0ed2f7);  */
+            }
+        }
+        .container span:nth-child(even){
+            animation-delay: .5s;
+            background: linear-gradient(45deg, #40e0d0, #ff8c00, #ff0080)
+        }
+        /* .container span:nth-child(2){
+            animation-delay: .1s;
+        }
+        .container span:nth-child(3){
+            animation-delay: .2s;
+        }
+        .container span:nth-child(4){
+            animation-delay: .3s;
+        }
+        .container span:nth-child(5){
+            animation-delay: .4s;
+        }
+        .container span:nth-child(6){
+            animation-delay: .5s;
+        }
+        .container span:nth-child(7){
+            animation-delay: .6s;
+        }
+        .container span:nth-child(8){
+            animation-delay: .7s;
+        }
+        .container span:nth-child(9){
+            animation-delay: .8s;
+        } */
+
+        /* .container span:nth-child(2){
+            animation-delay: 0.1s;
+        }.container span:nth-child(2){
+            animation-delay: 0.1s;
+        }.container span:nth-child(2){
+            animation-delay: 0.1s;
+        }.container span:nth-child(2){
+            animation-delay: 0.1s;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

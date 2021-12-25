@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon change onClick() </title>
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.15.3-web/css/all.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height:100vh;
+            display: grid;
+            place-items: center;
+            background-color: #07112e;
+        }
+        .fa{
+            font-size: 5em;
+            color:#fff;
+            cursor: pointer;            
+        }
+    </style>
+</head>
+<body>
+    <i id="menu-icon" class="fa fa-bars" onclick="changeIcon(this)"></i>
+</body>
+<script>
+    // normal function 
+    let changeIcon = function(icon) {
+        icon.classList.toggle('fa-times')
+    }
+    // arrow function 
+    changeIcon = (icon) => icon.classList.toggle("fa-times");
+</script>
+</html>

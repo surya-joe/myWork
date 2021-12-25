@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>splashing color card</title>
+    <style>
+        body{
+            min-height: 100vh;
+            background-color: #000;
+        }
+        body,
+        .card{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+        .card{
+            position:relative;
+            width:280px;
+            height:450px;
+            background-color: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .card h1{
+            font-family: sans-serif;
+            transition:0.3s ease
+        }
+        .card:hover h1{
+            color:#fff;
+            z-index: 2;
+        }
+        .card #top-circle,
+        .card #bottom-circle{
+            position:absolute;
+            width:100%;
+            height:100%;
+            background: linear-gradient(
+                135deg, 
+                #00DBDE,
+                #FC00FF
+            );
+            transition:0.5s ease;
+        }
+        .card #top-circle{
+            clip-path:circle(25% at 0 0 )
+        }
+        .card #bottom-circle{
+            clip-path:circle(25% at 100% 100%)
+        }
+        .card:hover #top-circle{
+            clip-path: circle(100% at 0 0);
+        }
+        .card:hover #bottom-circle{
+            clip-path: circle(100% at 100% 100%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <span id="top-circle"></span>
+        <h1>card</h1>
+        <span id="bottom-circle"></span>
+    </div>
+</body>
+</html>

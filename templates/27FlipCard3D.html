@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 3D flip card </title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .container{
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #07112e;
+        }
+        .container .card{
+            position:relative;
+            width:250px;
+            height:350px;
+            perspective: 1000px;
+            margin:50px;
+        }
+        .container .card .card-wrapper{
+            position:relative;
+            width:100%;
+            height:100%;
+            transition:0.8s;
+            transform-style: preserve-3d;
+        }
+        .container .card:hover .card-wrapper{
+            transform: rotateY(180deg)
+        }
+        .card-wrapper .imgBox, .card-wrapper .contentBox {
+            position:absolute;
+            width: 100%;
+            height:100%;
+            backface-visibility: hidden;
+        }
+        .card-wrapper .imgBox img{
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        .card-wrapper .contentBox{
+            background-color: #07112e;
+            color:#fff;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: center;
+            line-height: 2.5em;
+            border-radius: 20px;
+            transform:rotateY(180deg);
+            box-shadow: 0 0 5px rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-wrapper">
+                <div class="imgBox">
+                    <img src="../assets/images/wp3265424-teen-titans-go-wallpapers.jpg" alt="">
+                </div>
+                <div class="contentBox">
+                    <h2> Markus </h2>
+                    <h3> Web-Designer </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-wrapper">
+                <div class="imgBox">
+                    <img src="../assets/images/angryBirds.jpg" alt="">
+                </div>
+                <div class="contentBox">
+                    <h2> Markus </h2>
+                    <h3> Web-Designer </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-wrapper">
+                <div class="imgBox">
+                    <img src="../assets/images/wp1906160-hotel-transylvania-wallpapers.jpg" alt="">
+                </div>
+                <div class="contentBox">
+                    <h2> Markus </h2>
+                    <h3> Web-Designer </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

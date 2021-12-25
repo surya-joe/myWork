@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  glassMorphism card </title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            /* background-color: rgb(24, 179, 240); */
+            min-height: 100%;
+            width:100%;
+            object-fit: cover;
+            background-image: url(../assets/images/camp-4363073.png);
+        }
+        .container{
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .container .card{
+            position:relative;
+            width:300px;
+            height:400px;
+            background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+overflow: hidden;
+margin:30px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding:20px;
+        }
+        img{
+            width:100%;
+        }
+        .card h1{
+            position:relative;
+            /* height:100%;
+            width:100%; */
+            filter: blur(0px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- <img src="../assets/images/luna.jpg" alt=""> -->
+            <h1>Card-1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam facere, ab beatae, debitis itaque animi aliquam, accusantium saepe deleniti libero unde temporibus sint suscipit! Incidunt amet unde nostrum non quasi.</p>
+        </div>
+        <div class="card">
+            <!-- <img src="../assets/images/luna.jpg" alt=""> -->
+            <h1>Card-1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam facere, ab beatae, debitis itaque animi aliquam, accusantium saepe deleniti libero unde temporibus sint suscipit! Incidunt amet unde nostrum non quasi.</p>
+        </div>
+        <div class="card">
+            <!-- <img src="../assets/images/luna.jpg" alt=""> -->
+            <h1>Card-1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam facere, ab beatae, debitis itaque animi aliquam, accusantium saepe deleniti libero unde temporibus sint suscipit! Incidunt amet unde nostrum non quasi.</p>
+        </div>
+    </div>
+</body>
+</html>

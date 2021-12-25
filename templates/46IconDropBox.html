@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Icon Box </title>
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.15.3-web/css/all.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* flex-wrap: wrap; */
+        }
+        .container .iconBox{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container .dropBox input{
+            /* position: absolute; */
+            width: 100%;
+            height: 100%;
+            appearance: none;
+        }
+        .container .dropBox input::before{
+            position:absolute;
+            content: "\f1e0";
+            /* font-family: 'Font Awesome 6 Free'; */
+        }
+        .container .dropBox input:checked::before{
+            content: '\f00d';
+            font-size: 2em;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="iconBox">
+            <a href="#">
+                <i class="fab fa-youtube"></i>
+            </a>
+        <!-- </div> -->
+        <!-- <div class="IconBox"> -->
+            <a href="#">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <!-- </div> -->
+        <!-- <div class="IconBox"> -->
+            <a href="#">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        <!-- </div> -->
+        <!-- <div class="IconBox"> -->
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="dropBox">
+                <input type="checkbox">
+        </div>
+        
+    </div>
+</body>
+</html>

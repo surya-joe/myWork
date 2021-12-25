@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check box icon transition</title>
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.15.3-web/css/all.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: sans-serif;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+        }
+        .icon-box{
+            position:relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .icon-box a{
+            position:absolute;
+            /* display: none; */
+            text-decoration: none;
+            color:#000;
+        }
+        .icon-box input{
+            z-index: 2;
+            /* overflow: hidden; */
+        }
+        /* #i1{
+            transform:translateX(-50px)
+        } */
+        input:checked a{
+            transform:translateX(-50px)
+            /* left:-50px */
+        }
+    </style>
+</head>
+<body>
+    <div class="icon-box">
+        <input type="checkbox">
+        <a href="#" id="i1">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="#">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#">
+            <i class="fab fa-twitter"></i>
+        </a>
+    </div>
+</body>
+</html>

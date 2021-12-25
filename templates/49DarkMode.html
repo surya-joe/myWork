@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dark Theme </title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .container{
+            min-height:100vh;
+            padding:40px;
+        }
+        .container .navbar{
+            position:relative;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            padding:10px 20px;
+        }
+        .container .navbar img{
+            width:70px;
+            padding-right:8px;
+        }
+        .container .header{
+            padding-top:40px;
+            text-align: center;
+        }
+        .container .header button{
+            font-size: 1em;
+            padding:12px 20px; 
+            margin:40px;
+            background-color:#007bff;
+            color:#fff;
+            border-radius: 8px;
+            border:2px solid;
+            cursor: pointer;
+        }
+        .container .main{
+            text-align: justify;
+            line-height: 1.6;
+        }
+        /* Style for dark theme  */
+        *{
+            transition: background-color 0.4s ease, color 0.3s ease;
+        }
+        /* Set default theme  */
+        :root{
+            --bkg-color:#fff;
+            --navbar-color:#eee;
+            --text-color:#111;
+        }
+        /* Set dark theme */
+        .dark-mode{
+            --bkg-color:#121212;
+            --navbar-color:#292929;
+            --text-color:#fff;
+        }
+        body{
+            background-color: var(--bkg-color);
+            color: var(--text-color);
+        }
+        .navbar{
+            background-color: var(--navbar-color);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="../assets/images/youtube.png" alt=""> 
+            <h2> youtube </h2>
+        </div>
+        <div class="header">
+            <h1> Simple Dark Theme </h1>
+            <button onclick="switchTheme()" >Change Theme</button>
+        </div>
+        <div class="main">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium tenetur iure cumque in quisquam culpa a! Eius laboriosam tempore omnis magni accusantium esse, aperiam laborum alias odit deleniti, id in illum! Excepturi odio consectetur, omnis animi cupiditate, quasi ut dolorem perferendis explicabo facilis architecto esse quam hic ex obcaecati earum incidunt tenetur voluptatem. Dicta mollitia ad a eveniet, eaque porro illo saepe unde tenetur! A amet dolore iure qui dolor. Vero at dolorem sint, eum nemo impedit nulla ab, quo recusandae quae sunt deleniti repellat natus ducimus sapiente magnam consequatur asperiores non temporibus. Dolore dolores ipsa cum vero qui mollitia sapiente magnam enim iure voluptates quaerat soluta animi pariatur optio itaque accusantium omnis praesentium delectus assumenda libero aut facilis, iste, tenetur repellat? Corporis perspiciatis, totam, nulla praesentium dolorem voluptates odit molestias consequatur beatae assumenda tempore quasi, eius dolore aut? Ea velit dolore adipisci commodi! Tenetur, molestias nemo, modi error quas architecto ipsam suscipit odit id asperiores provident est eius facilis assumenda blanditiis nesciunt! Quam odit ad deleniti distinctio. Sit quidem culpa totam exercitationem ipsam. Id vero sequi ut doloremque laborum suscipit nostrum ipsam similique, nobis neque dignissimos hic tenetur dolores molestiae eveniet enim dolor molestias quidem adipisci, ducimus alias doloribus. Deserunt pariatur dicta voluptatibus tenetur dignissimos magni accusantium quod suscipit mollitia fuga consectetur consequuntur cupiditate magnam, deleniti labore eligendi error vitae sint, molestiae ipsum veritatis! Consequatur omnis ratione quidem doloremque laudantium ad nemo voluptas quibusdam sapiente quisquam. Consequatur nostrum nihil a neque soluta recusandae inventore vitae atque tenetur quae? Obcaecati quod provident veritatis id ad, quasi vero sed possimus odio at illo neque consectetur placeat cum eius. Fugit laboriosam, harum dolore cum omnis libero, assumenda eos nemo necessitatibus repellat nesciunt maxime ipsam autem minima recusandae eaque vel tenetur expedita amet provident eligendi porro in. Adipisci expedita optio, ipsa eveniet saepe perferendis magni commodi quidem velit laudantium, voluptatem dolor id, quo sed doloribus vel neque! Veritatis eos voluptatibus soluta molestias nam ex quo rem, ratione doloremque ipsum, magni, aperiam vel? Voluptatum consectetur officiis nemo reprehenderit est placeat dolorum quisquam corporis perferendis quod illo unde illum deleniti quos, quasi aut qui cumque.</p>
+        </div>
+    </div>
+
+    <script>
+        function switchTheme(){
+            document.body.classList.toggle("dark-mode")
+        }
+    </script>
+</body>
+</html>

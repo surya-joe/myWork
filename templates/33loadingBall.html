@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jumping Ball animation </title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #000;
+        }
+        .container{
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+         .container span{
+            position:relative;
+            width:40px;
+            height:40px;
+            background-color: #fff;
+            margin:18px;
+            border-radius: 50%;
+            animation:bounce 2s ease infinite
+        }
+        @keyframes bounce {
+            80%{
+                transform: scale(1.5);
+                background-color: #000;
+                /* box-shadow: 0 0 10px #03bcf4,
+                0 0 20px #03bcf4,
+                0 0 40px #03bcf4,
+                0 0 80px #03bcf4,
+                0 0 120px #03bcf4; */
+            }
+        }
+        .container span:nth-child(2){
+            animation-delay: 0.1s;
+        }
+        .container span:nth-child(3){
+            animation-delay: 0.2s;
+        }
+        .container span:nth-child(4){
+            animation-delay: 0.3s;
+        }
+        .container span:nth-child(5){
+            animation-delay: 0.4s;
+        }
+        .container span:nth-child(6){
+            animation-delay: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

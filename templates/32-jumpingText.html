@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumping Text</title>
+    <style>
+      body {
+        /* background-color:  #fff022d5; */
+        /* background-color: #000; */
+        font-family: sans-serif;
+      }
+
+      .container{
+        position: absolute;
+        width:100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      span {
+        position: relative;
+        top: 20px;
+        font-size: 7em;
+        font-weight: 700;
+        /* color: #fff; */
+        color:#ff4814;
+        animation: bounce 0.3s ease infinite alternate;
+        /* text-shadow: 0 1px 0 #ede,
+            0 2px 0 #ede,
+            0 3px 0 #ede,
+            0 4px 0 #ede,
+            0 5px 0 #ede,
+            0 6px 0 transparent,
+            0 7px 0 transparent,
+            0 8px 0 transparent,
+            0 9px 0 transparent,
+            0 10px 10px rgba(0, 0, 0, 0.4); */
+    }
+      
+
+      span:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      span:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      span:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      span:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      span:nth-child(6) {
+        animation-delay: 0.5s;
+      }
+
+      @keyframes bounce {
+        100% {
+          top: -20px;
+          text-shadow: 
+          0 1px 0 #000,
+          0 2px 0 #000,
+          0 3px 0 #000,
+          0 4px 0 #000,
+          0 5px 0 #000, 
+          0 6px 0 #000,
+          0 7px 0 #000, 
+          0 8px 0 #000, 
+          0 9px 0 #000,
+          0 50px 25px rgba(0, 0, 0, 0.4);
+        }
+      }
+      @media(max-width:500px){
+        span{
+          font-size: 4em;
+        }
+    }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <span>B</span>
+    <span>o</span>
+    <span>u</span>
+    <span>n</span>
+    <span>c</span>
+    <span>e</span>
+  </div>  
+</body>
+</html>

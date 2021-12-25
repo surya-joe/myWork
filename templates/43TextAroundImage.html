@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Wrap text around image </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background-color: #000; 
+            color:#fff;
+        }
+        .container{
+            min-height:100vh;
+            padding:0 10px ;
+        }
+        .container h1{
+            text-align: center;
+            font-size: 6em;
+            padding:15px 0;
+            font-family: Grechen Fuemen , sans-serif;
+        }
+        .container img{
+            width:320px;
+            height:320px;
+            object-fit: cover;
+            shape-outside: circle();
+        }
+        .container #img1{
+            float: left;
+            border-radius: 0 50% 50% 0;
+            padding-right:30px;
+        }
+        .container #img2{
+            float:right;
+            border-radius:50% 0 0 50%;
+            padding-left:30px;
+        }
+        p{
+            text-align: justify;
+            line-height: 1.6;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wrap Text Around Image</h1>
+        <img id="img1" src="../assets/images/pexels-ilyas-chabli-7385351.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium expedita facere doloribus sint illo, minus, explicabo eius quam eaque eos error est nulla. Facilis ratione nesciunt fugiat ipsa, aut quam odio eaque architecto corrupti sapiente consectetur laborum possimus culpa voluptate. Iure in placeat voluptate nihil quam voluptatem asperiores omnis, aliquid reiciendis, aliquam praesentium, ab beatae. Voluptate voluptas dolor earum, fugit aperiam totam ipsam incidunt animi aliquam? Atque ut expedita iure culpa explicabo cupiditate laborum reiciendis doloribus repellat recusandae. At sunt, iusto consequatur cumque veritatis debitis alias incidunt esse? Labore asperiores alias deleniti consequatur dolores quidem sit accusantium nemo earum minus non reprehenderit, necessitatibus nam. Enim, aspernatur, veritatis sunt quia expedita assumenda vitae pariatur itaque eveniet ad dignissimos? Voluptatum, neque. Consequuntur perferendis placeat quis earum, officiis repellat, fugit reprehenderit aut iusto minus nemo quas sed quia quae dolore neque cupiditate, expedita distinctio. Asperiores obcaecati, quidem facilis beatae accusamus aliquid enim veritatis harum, tempore autem magni sint modi voluptates perspiciatis itaque voluptate voluptatem! Tempora quia ad vero quos in ex, id doloribus labore totam cupiditate alias. Magnam minima nemo deleniti provident iure dolorem ipsa maxime architecto. Consequatur distinctio, illum fugiat suscipit repellendus exercitationem, dolorum voluptatum rerum tenetur dignissimos repellat officiis nostrum velit.</p>
+        <img id="img2" src="../assets/images/moana.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium expedita facere doloribus sint illo, minus, explicabo eius quam eaque eos error est nulla. Facilis ratione nesciunt fugiat ipsa, aut quam odio eaque architecto corrupti sapiente consectetur laborum possimus culpa voluptate. Iure in placeat voluptate nihil quam voluptatem asperiores omnis, aliquid reiciendis, aliquam praesentium, ab beatae. Voluptate voluptas dolor earum, fugit aperiam totam ipsam incidunt animi aliquam? Atque ut expedita iure culpa explicabo cupiditate laborum reiciendis doloribus repellat recusandae. At sunt, iusto consequatur cumque veritatis debitis alias incidunt esse? Labore asperiores alias deleniti consequatur dolores quidem sit accusantium nemo earum minus non reprehenderit, necessitatibus nam. Enim, aspernatur, veritatis sunt quia expedita assumenda vitae pariatur itaque eveniet ad dignissimos? Voluptatum, neque. Consequuntur perferendis placeat quis earum, officiis repellat, fugit reprehenderit aut iusto minus nemo quas sed quia quae dolore neque cupiditate, expedita distinctio. Asperiores obcaecati, quidem facilis beatae accusamus aliquid enim veritatis harum, tempore autem magni sint modi voluptates perspiciatis itaque voluptate voluptatem! Tempora quia ad vero quos in ex, id doloribus labore totam cupiditate alias. Magnam minima nemo deleniti provident iure dolorem ipsa maxime architecto. Consequatur distinctio, illum fugiat suscipit repellendus exercitationem, dolorum voluptatum rerum tenetur dignissimos repellat officiis nostrum velit.</p>
+    </div>
+</body>
+</html>

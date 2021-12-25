@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slide-right {
+  width: 100%;
+  overflow: hidden;
+  margin-left: 400px;
+  max-width: 500px
+}
+
+.slide-right h2 {
+  animation: 2s slide-right;
+  animation-delay: 2s;
+}
+
+@keyframes slide-right {
+  from {
+    margin-left: -500px;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+        </style>
+        
+</head>
+<body>
+    
+    <div class="slide-right">
+        <h2>Text that will slide in from the left</h2>
+      </div>
+        
+</body>
+</html>

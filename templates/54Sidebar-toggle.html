@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar-Toggle</title>
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.15.3-web/css/all.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            min-height: 100vh;
+        }
+        .sidebar{
+            position:absolute;
+            width:80px;
+            height:100%;
+            background-color: #111;
+            transition:all 0.5s ease
+        }
+        .sidebar.active{
+            width:240px;
+        }
+        .sidebar .menu-btn {
+            position:absolute;
+            color:#fff;
+            font-size: 2em;
+            top:40px;
+            left:25px;
+            z-index: 2;
+        }
+        .sidebar h1{
+            display: none;
+        }
+        .sidebar.active h1{
+            position:relative;
+            color:#fff;
+            height:100%;
+            display: grid;
+            place-items: center;
+        }
+        .main-content {
+            position:absolute;
+            width:calc(100% - 80px);
+            height:100%;
+            left:80px;
+            padding:40px 5px;
+            transition:all 0.5s ease;
+        }
+        .sidebar.active ~ .main-content {
+            width: calc(100% - 240px);
+            left: 240px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="menu-btn">
+            <i class="fa fa-bars"></i>
+        </div>
+        <h1>Sidebar</h1>
+    </div>
+    <div class="main-content">
+        <h1>Main-content</h1>
+    </div>
+    <script>
+        let menuBtn = document.querySelector('.menu-btn')
+        let sidebar =  document.querySelector('.sidebar')
+        menuBtn.onclick = function() {
+            sidebar.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

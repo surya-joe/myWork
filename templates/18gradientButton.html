@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Gradient Button </title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        body {
+        height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        background: #222;
+        }
+
+        .container {
+        max-width: 250px;
+        padding: 1rem;
+        color: white;
+        border-width: 5px;
+        border-style: solid;
+        border-image: linear-gradient(to bottom, red, rgba(0, 0, 0, 0)) 1 100% ;
+        }
+        #btn1{
+        font-size: 1.5em;
+        padding:30px;
+        border: 15px solid;
+        border-image: linear-gradient(to top left, #40e0d0, #ff8c00, #ff0080) 1;
+        background-color: #fff;
+        cursor: pointer;
+        }
+
+        #btn2{
+        width: 300px;
+        height: 80px;
+        font-size: 1.4em;
+        border: double 10px transparent;
+        border-radius: 80px;
+        background-image: linear-gradient(#fff,#fff),radial-gradient(circle at top left, #40e0d0, #ff8c00, #ff0080);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="btn1"> Gradient-Button </button>
+    <button id="btn2"> Gradient-Button </button>
+
+    <div class="container">
+        <h1>container</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam culpa unde itaque esse necessitatibus autem vero, voluptatum id illo impedit vel. Quasi impedit exercitationem ut eligendi voluptas officiis modi saepe.</p>
+    </div>
+</body>
+</html>

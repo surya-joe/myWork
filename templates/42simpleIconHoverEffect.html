@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Simple icons on hover effect</title>
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #07112e;
+        }
+
+        i{
+            color:#fff;
+            width:50px;
+            height:50px;
+            font-size: 3em;
+            text-align: center;
+            padding:15px;
+            border-radius: 10px;
+            margin-left:20px;
+            transition:0.3s ease-in-out;
+        }
+
+        i:hover{
+            transform: scale(1.2);
+        }
+
+        i:hover:nth-child(1){
+            background-color:#f35;
+        }
+        i:hover:nth-child(2){
+            background-color:#17d;
+        }
+        i:hover:nth-child(3){
+            background-color:#0d3;
+        }
+        i:hover:nth-child(4){
+            background: linear-gradient(
+                135deg,
+                #FF0080,
+                #FF8C00,
+                #40E0D0); 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-instagram"></i>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom-In Profile card</title>
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.15.3-web/css/all.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f3f3f3;
+        }
+        .card-wrapper{
+            position:relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .card-wrapper .card{
+            position:relative;
+            width:280px;
+            height:450px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .card-wrapper .card img{
+            position:absolute;
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            zoom:-100%;
+            transition:0.5s;
+        }
+        .card-wrapper .card:hover img{
+            transform:scale(1.5)
+        }
+        .card-wrapper .card .icon-box{
+            position:absolute;
+            bottom:20px;
+            z-index: 9999;
+        }
+        a{
+            position:relative;
+            width:45px;
+            height:45px;
+            background-color: #fff;
+            color:#000;
+            text-decoration: none;
+            display: grid;
+            place-items: center;
+            margin:8px 5px;
+            border-radius: 50%;
+            visibility: hidden;
+            opacity: 0;
+            transition:visibility 0s, opacity 0.3s linear;
+            overflow: hidden;
+            transition:0.3s ease;
+        }
+        .card:hover a{
+            visibility: visible;
+            opacity: 1;
+        }
+        i{
+            font-size: 1.2em;
+        }
+        a:hover{
+            background-color: #007fff;
+            color:#fff
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card-wrapper">
+        <div class="card">
+            <img src="../assets/images/grayov.jpg" alt="">
+            <div class="icon-box">
+                <a href="#">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

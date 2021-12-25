@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Simple gradient Buttons</title>
+    <!-- link css -->
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+        body{
+        min-height:100vh;
+        display: grid;
+        place-items: center;
+        background-color: #ededed;
+        }
+        button{
+            padding:15px 40px;
+            font-size: 1.5em;
+            background-color: #fff;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+            transition:0.3s ease-in-out;
+            border:8px hidden #fff;
+        }
+        button:nth-child(1),button:hover{
+            border:8px solid;
+            border-image: linear-gradient(to top left, #40e0d0, #ff8c00, #ff0080) 1;
+        }
+
+    </style>
+</head>
+<body>
+    <button> Gradient-Border </button>
+    <button> Gradient-Hover </button>
+</body>
+</html>

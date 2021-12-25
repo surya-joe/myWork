@@ -32,16 +32,19 @@
             background:#ee3;    
         }
         .container{
-            position:relative;
+            /* position:relative; */
             height:100vh;
             display:grid;
             grid-template-areas: 
-            'navbar header header header'
-            'navbar main main main'
-            'navbar footer footer footer';
+            'navbar header '
+            'navbar main '
+            'navbar footer';
+            grid-template-columns: 2fr 5fr;
             grid-template-rows:1fr 5fr 1fr;
         }
-        h2{
+        div{
+            font-size:2rem;
+            font-weight:700;
             height:100%;
             display:flex;
             justify-content: center;
@@ -49,13 +52,13 @@
         }
         @media(max-width:500px){
             .container{
-                display:grid;
                 grid-template-areas:
                 'navbar'
                 'header'
                 'main'
                 'footer';
-                grid-template-rows: 1fr 1fr 3fr 1fr;
+                grid-template-rows: 1fr 1fr 4fr 1fr;
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -63,16 +66,16 @@
 <body>
     <div class="container">
         <div class="navbar">
-            <h2>Navbar</h2>
+            Navbar
         </div>
         <div class="header">
-            <h2>Header</h2>
+            Header
         </div>
         <div class="main">
-            <h2>Main</h2>
+            Main
         </div>
         <div class="footer">
-            <h2>Footer</h2>
+            Footer
         </div>
     </div>
 </body>

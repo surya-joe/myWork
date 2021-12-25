@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Masonry Layout </title>
+    <style>
+        .masonry-layout{
+            column-count: 3;
+        }
+        img{
+            width:100%;
+            height:auto;
+            margin-bottom: 14px;
+            -webkit-break-inside: avoid;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        @media(max-width:576px){
+            .masonry-layout{
+                column-count:2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="masonry-layout">
+        <img src="../assets/images/ray.jpg" alt="">
+        <img src="../assets/images/grayGlitter.jpg" alt="">
+        <img src="../assets/images/june.jpg" alt="">
+        <img src="../assets/images/john-arano-h4i9G-de7Po-unsplash.jpg" alt="">
+        <img src="../assets/images/shoeBlue.jpg" alt="">
+        <img src="../assets/images/1342863.jpg" alt="">
+        <img src="../assets/images/liz.jpg" alt="">
+        <img src="../assets/images/pinky.jpg" alt="">
+        <img src="../assets/images/jojo.jpg" alt="">
+        <img src="../assets/images/rono.jpg" alt="">
+    </div>
+</body>
+</html>

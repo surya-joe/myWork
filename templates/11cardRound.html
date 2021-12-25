@@ -4,104 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Round Flip card</title>
+    <title>round card translate</title>
     <style>
         *{
             margin:0;
             padding:0;
-            box-sizing:border-box;
-            font-family:sans-serif;
+            box-sizing: border-box;
+            font-family: sans-serif;
         }
-        body{
+        .container{
             min-height:100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-        .container{
-            position:relative;
-            width:auto;
-            height:auto;
-            display: flex;
-            flex-wrap:wrap;
-            justify-content: space-around;
-            align-items: center;
+            flex-wrap: wrap;
         }
         .container .card{
             position:relative;
-            width: 320px;
-            height:320px;
-            box-shadow:0 15px 20px rgba(0,0,0,0.5);
-            border-radius:50%;
+            width:300px;
+            height:300px;
+            margin:30px;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+            /* opacity: 15%; */
+            border-radius: 50%;
             overflow: hidden;
-            margin:20px;
             background-color: #111;
-            z-index: 0;
-        }      
-        .container .card img{
-            position:relative;
-            width: 100%;
-            height:100%;
-            object-fit:cover;
-            transition:0.8s;
-            border-radius:50%;
+            color:#fff
         }
-        .container .card:hover #img1{
-            transform:translateX(-100%);
+        .container .card .imgBox img{
+            position:absolute;
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            border-radius: 50%;
+            transition:1s
         }
-        .container .card:hover #img2{
-            transform:translateY(-100%);
+        .container .card:hover .imgBox #img1{
+            transform: translateX(-100%);
         }
-        .container .card:hover img:nth-child(1){
-            transform:translateX(100%);
+        .container .card:hover .imgBox #img2{
+            transform: translateY(-100%);
+        }
+        .container .card:hover .imgBox #img3{
+            transform: translateX(100%);
         }
         .container .card .contentBox{
             position:absolute;
-            z-index:-1;
-            top:50%;
-            left:50%;
-            transform:translate(-50%,-50%);
-            font-size:1.7em;
-            padding:100%;
-            background-color: #111;
-            text-align: center;
-            color:rgb(128, 255, 55);
+            height:100%;
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        .container .card .contentBox h3{
-            position:relative;
-            width:300px;
-            color:#fff;
-            padding:5px;
-            font-size:1em;
+        .container .card .contentBox h1{
+            font-size: 3em;
+            color:#80ff37;
+        }
+        .container .card .contentBox h4{
+            font-size: 1.5em;
         }
 
+        
+
+        
     </style>
 </head>
 <body>
     <div class="container">
         <div class="card">
-            <img id="img1" src="../assets/images/alexa.jpg" alt="">
+            <div class="imgBox">
+                <img id="img1" src="../assets/images/alexa.jpg" alt="">
+            </div>
             <div class="contentBox">
-                <h1>Alexa</h1>
-                <h3>Fashion-Designer</h3>
+                <h1> Lilly </h1>
+                <h4> Fashion-Designer </h4>
             </div>
         </div>
 
         <div class="card">
-            <img id="img2" src="../assets/images/luna.jpg" alt="">
+            <div class="imgBox">
+                <img id="img2" src="../assets/images/luna.jpg" alt="">
+            </div>
             <div class="contentBox">
-                <h1>Luna</h1>
-                <h3>Photographer</h3>
+                <h1> Luna </h1>
+                <h4> Photographer </h4>
             </div>
         </div>
 
         <div class="card">
-            <img id="img3" src="../assets/images/grayb.jpg" alt="">
+            <div class="imgBox">
+                <img id="img3" src="../assets/images/grayb.jpg" alt="">
+            </div>
             <div class="contentBox">
-                <h1>Juvia</h1>
-                <h3>Web-Developer</h3>
+                <h1> Lilly </h1>
+                <h4> Web-Developer </h4>
             </div>
         </div>
+
+        
     </div>
 </body>
 </html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile card side translate</title>
+    <link rel="stylesheet" href="../assets/fontawesome-free-5.15.3-web/css/all.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background-color: #eee;
+        }
+        .container{
+            min-height:100vh;
+            flex-wrap: wrap;
+        }
+        .container,
+        .container .card .content .icon-box,
+        .fab{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container .card{
+            position: relative;
+            width:250px;
+            height:250px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+            margin:70px
+        }
+        .container .card img{
+            position: absolute;
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+            transition:0.5s ease;
+            z-index: 2;
+            border-radius: 20px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        }
+        .card:hover img{
+            transform:translate(-50%,-50%) scale(0.5);
+        }
+        .container .card .content{
+            position:absolute;
+            top:55%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            text-align: center;
+        }
+        .container .card .content p{
+            margin:30px 0;
+            font-size: 1.4em;
+        }
+        a{
+            text-decoration: none;
+        }
+        .fab{
+           position:relative;
+           width:38px;
+           height:38px;
+           font-size: 1.1em;
+           color:#000;
+           margin:0 8px;
+           border-radius: 50%;
+           box-shadow: 0 0 10px rgba(0,0,0,0.3);
+           transition:0.5s ease
+        }
+        .fab:hover{
+            color:#fff;
+            background-color:#007bff;
+            transform:rotate(360deg);
+        }
+        @media(max-width:576px){
+            .card:hover img{
+                transform: translate(0%,-50%) scale(0.5)
+            }
+            .container .card .content {
+                top:60%
+            }
+            .container .card .content p{
+                margin:20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="card">
+            <img src="../assets/images/markus.jpg" alt="">
+            <div class="content">
+                <h1>SURYA</h1>
+                <p>Architect</p>
+                <div class="icon-box">
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="card">
+            <img src="../assets/images/moana.jpg" alt="">
+            <div class="content">
+                <h1>SURYA</h1>
+                <p>Architect</p>
+                <div class="icon-box">
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="card">
+            <img src="../assets/images/luna.jpg" alt="">
+            <div class="content">
+                <h1>SURYA</h1>
+                <p>Architect</p>
+                <div class="icon-box">
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</body>
+</html>

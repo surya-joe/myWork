@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Simple Loading Animation using CSS </title>
+    <!-- link css -->
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: #07112e;
+        }
+        .bar{
+            position:relative;
+            width:800px
+        }
+        .bar span{
+            position:absolute;
+            width:0;
+            height:100px;
+            background: repeating-linear-gradient(
+                45deg,
+                #007bff 0px,
+                #007bff 30px,
+                #ededed 30px,
+                #ededed 60px
+            );
+            animation: loading 5s linear infinite;
+            border-radius: 20px;
+        }
+        @keyframes loading {
+            0%{ width:0 }
+            50%{ width:30% }
+            80%{ width:50% }
+            90%{ width:100% }
+            100%{ width:100% }
+        }
+        .loading-tag{
+            position:relative;
+            width:800px;
+            height:80px;
+            font-size: 2.5em;
+            text-align: center;
+            color:#07112e
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bar">
+            <span></span>
+        </div>
+        <div class="loading-tag">
+            <h1> Loading... </h1>
+        </div>
+    </div>
+</body>
+</html>

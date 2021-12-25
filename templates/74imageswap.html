@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Nemorphism card </title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .container{
+            min-height:100vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .container .card{
+            position:relative;
+            width:300px;
+            height:400px;
+            margin:50px;
+            border-radius: 16px;
+            /* overflow: hidden; */
+        }
+        .container .card img{
+            width: 100%;
+            height:100%;
+            object-fit: cover;
+        }
+        .container .card .content{
+            position:absolute;
+            width:100%;
+            height:0;
+            color:#222;
+            bottom:0;
+            text-align: center;
+            background: rgba( 255, 255, 255, 0.6 );
+            transition:0.3s ease-in-out
+        }
+        /* .container .card:hover .content{
+            height:150px;
+            padding-top:40px
+        } */
+        .container .card .content h2{
+            padding-top:10px;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="../assets/images/rono.jpg" alt="">
+            <div class="content">
+                <h1> Ray Jones </h1>
+                <h2> Journalist </h2> 
+            </div>
+        </div>
+        <!-- <div class="card">
+            <img src="../assets/images/cracky.jpg" alt="">
+            <div class="content">
+                <h1> Lara Kent </h1>
+                <h2> Travel Blogger </h2> 
+            </div>
+        </div>
+        <div class="card">
+            <img src="../assets/images/jojo.jpg" alt="">
+            <div class="content">
+                <h1> Raaya joe </h1>
+                <h2> Fashion Designer </h2> 
+            </div>
+        </div> -->
+    </div>
+</body>
+</html>
