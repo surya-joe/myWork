@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Image overlay card </title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family:sans-serif;
+        }
+        body{
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2c2d34
+        }
+        .container{
+            position:absolute;
+            background-color: #f0d43a;
+            width:300px;
+            height:300px;
+            border-radius: 8px;
+            box-shadow: rgba(0,0,0,0.5) 0 5px 15px;
+            overflow: hidden;
+        }
+        .container .imgBox{
+            width:250px;
+            height:250px;
+            position: absolute;
+            top:45%;
+            left:8%;
+            text-align: center;
+            rotate: 12deg;
+            transition:0.4s;
+        }
+        .container .imgBox img{
+            width:200px;
+            height:200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin:2px;
+            box-shadow: rgba(0,0,0,0.3) 0 5px 15px;
+        }
+        .container:hover .imgBox{
+            top:55%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            rotate: 0deg;
+            cursor:pointer
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="imgBox">
+            <img src="../assets/images/friesWoman.jpg" alt="">
+            <h2>BONO</h2>
+        </div>
+    </div>
+</body>
+</html>

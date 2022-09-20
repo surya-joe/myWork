@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Click Button effect </title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1d1d1d;
+        }
+        #clickBtn{
+            width:120px;
+            font-size: 1em;
+            padding:10px;
+            border-style: none;
+            background-color: #f70776;
+            color:#fff;
+            transition:0.2s ease
+        }
+        #clickBtn:hover{
+            cursor: pointer;
+            background-color: rgba(247, 7, 118, 0.8);
+        }
+        #clickBtn:active{
+            transform:scale(0.8)
+        }
+    </style>
+</head>
+<body>
+    <button id="clickBtn">
+        Click Me
+    </button>
+</body>
+</html>

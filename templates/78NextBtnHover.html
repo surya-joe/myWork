@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button hover effect</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #155263;
+        }
+        #nextBtn,
+        #previousBtn{
+            cursor:pointer;
+            width:120px;
+            font-size: 1em;
+            border-style: none;
+            padding:10px ;
+            margin: 10px;
+            background-color: #ffc93c;
+            transition: all 0.5s;
+        }
+        #nextBtn span,
+        #previousBtn span{
+            position:relative;
+            display: inline-block;
+            transition:all 0.5s;
+        }
+        #previousBtn span{
+            left:-8px;
+        }
+        #nextBtn span{
+            right:-8px;
+        }
+        #previousBtn span::before{
+            content:'\00ab';
+            opacity:0;
+            transition:0.5s;
+        }
+        #nextBtn span::after{
+            content: '\00bb';
+            opacity:0;
+            transition:0.5s;
+        }
+        #previousBtn:hover span{
+            padding-left:16px;
+
+        }
+        #nextBtn:hover span{
+            padding-right:16px;
+        }
+        #previousBtn:hover span::before{
+            opacity:1;
+            left:5px;
+        }
+        #nextBtn:hover span::after{
+            opacity:1;
+            right:5px;
+        }
+        #nextBtn:hover,
+        #previousBtn:hover{
+            background-color: rgba(255, 201, 60,0.8);
+        }
+    </style>
+</head>
+<body>
+    <button id="previousBtn">
+        <span> Previous </span>
+    </button>
+    <button id="nextBtn">
+        <span> Next </span>
+    </button>
+</body>
+</html>

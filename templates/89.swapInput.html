@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Swap Input Text </title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e2e2e2;
+        }
+        .form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form label{
+            text-align: center;
+            /* padding:20px 0; */
+            /* margin:15px 0; */
+        }
+        .form input{
+            width:200px;
+            height: 40px;
+            padding:0 10px;
+        }
+        .form button{
+            width:90px;
+            height:30px;
+            margin:0 15px;
+            /* padding:10px; */
+            background-color:#2196f3;
+            color:#fff;
+            border-radius: 8px;
+            border-style: none;
+            transition:0.3s;
+        }
+        .form button:active{
+            transform: scale(0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <label for="text_1"> Text-1
+            <br><input id="text_1" type="text">
+        </label>
+        <button id="swapBtn" onclick="swapText()" > Swap Text </button>
+        <label for="text_2"> Text-2
+            <br><input id="text_2" type="text">
+        </label>
+    </div>
+
+    <script>
+        function swapText(){
+            let input_1 = document.getElementById('text_1')
+            let input_2 = document.getElementById('text_2')
+            let temp = ' '
+            // console.log(typeof(temp));
+            // console.log(typeof(input1.innerText));
+            if((input_1.value != ' ') || (input_2 != ' ')){
+                // alert("Inputs are empty")
+                temp = input_1.value 
+                console.log(temp.value);
+                input_1.value = input_2.value
+                console.log(input_1.value);
+                input_2 = temp.value
+                console.log(input_2.value);
+            } else {
+
+            }
+        }
+    </script>
+</body>
+</html>

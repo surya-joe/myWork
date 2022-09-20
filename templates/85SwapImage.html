@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Swap images using Js </title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background-color: #233142;
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width:300px;
+            height:300px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #swapBtn{
+            background-color: #e3e3e3;
+            font-size: 1em;
+            margin: 0 50px;
+            padding:12px;
+            border-style: none;
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            cursor:pointer;
+            transition:0.2s;
+        }
+        #swapBtn:active{
+            transform: scale(0.8)
+        }
+    </style>
+</head>
+<body>
+    <img id="img1" src="../assets/images/hotsoss.jpg" alt="" data-value="" onclick="swap(5)">
+    <button id="swapBtn" onclick="swapImage()"> Swap-Image </button>
+    <img id="img2" src="../assets/images/cokeYellow.jpg" alt="" data-value="2" onclick="swap(6)">
+
+    <script>
+        function swapImage(){
+            let firstImg = document.getElementById('img1')
+            let secondImg = document.getElementById('img2')
+            if(firstImg.src.match('../assets/images/hotsoss.jpg') && secondImg.src.match('../assets/images/cokeYellow\.jpg')){
+                firstImg.src = secondImg.src
+                secondImg.src = "../assets/images/hotsoss.jpg" 
+            } else {
+                firstImg.src = '../assets/images/hotsoss.jpg'
+                secondImg.src = "../assets/images/cokeYellow.jpg" 
+            }
+        }
+    </script>
+    
+</body>
+</html>

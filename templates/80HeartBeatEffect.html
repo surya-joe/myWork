@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HeartBeat effect </title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #101820;
+        }
+        .circle{
+            width:100px;
+            height:100px;
+            border-radius: 50%;
+            background-color: #fee715;
+            animation: heartBeatEffect 1.5s infinite
+        }
+        @keyframes heartBeatEffect {
+            0%{
+                box-shadow: #fee715 0 0 0 0;
+            }
+            75%{
+                box-shadow:#fee71500 0 0 0 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+</body>
+</html>
